@@ -1,9 +1,9 @@
-import React, { ButtonHTMLAttributes } from 'react'
+import React, { forwardRef } from 'react'
 
-import BrazilFlag from '../assets/brazil-flag.svg'
-import UsaFlag from '../assets/usa-flag.svg'
+import BrazilFlag from '@assets/svg/BrazilFlag'
+import UsaFlag from '@assets/svg/UsaFlag'
 
-type IFlagProps = ButtonHTMLAttributes<HTMLButtonElement> & {
+type IFlagProps = {
   flag: 'brazil' | 'usa'
   isSelected: boolean
 }
@@ -12,7 +12,7 @@ type IFlagIcon = {
   [key: string]: any // eslint-disable-line
 }
 
-const Flag: React.FC<IFlagProps> = ({ flag, isSelected, ...rest }) => {
+const Flag = forwardRef(function Flag({ flag, isSelected, ...rest }: IFlagProps, ref: any) {
   const flagIcon: IFlagIcon = {
     brazil: <BrazilFlag />,
     usa: <UsaFlag />
@@ -20,11 +20,12 @@ const Flag: React.FC<IFlagProps> = ({ flag, isSelected, ...rest }) => {
 
   return (
     <button
+      ref={ref}
       type="button"
       className={
         (isSelected ? 'filter-grayscale' : 'hover:filter-grayscale') +
         ' ' +
-        'w-12 h-12 focus:outline-none'
+        'w-8 h-8 focus:outline-none'
       }
       disabled={isSelected}
       {...rest}
@@ -32,6 +33,6 @@ const Flag: React.FC<IFlagProps> = ({ flag, isSelected, ...rest }) => {
       {flagIcon[flag]}
     </button>
   )
-}
+})
 
 export default Flag

@@ -2,7 +2,13 @@
   "env": {
     "browser": true,
     "es2021": true,
-    "node": true
+    "node": true,
+    "jest": true
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
   },
   "extends": [
     "plugin:react/recommended",
@@ -11,11 +17,6 @@
     "plugin:jsx-a11y/recommended",
     "plugin:prettier/recommended"
   ],
-  "settings": {
-    "react": {
-      "version": "detect"
-    }
-  },
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaFeatures": {
@@ -33,9 +34,14 @@
   ],
   "rules": {
     "prettier/prettier": "error",
-    "no-use-before-define": "off",
-    "@typescript-eslint/no-use-before-define": ["error"],
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
     "react/prop-types": "off",
+    "no-use-before-define": "off",
+    "react/react-in-jsx-scope": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/no-use-before-define": ["error"],
     "jsx-a11y/anchor-is-valid": [
       "error",
       {

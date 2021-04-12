@@ -1,16 +1,13 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "baseUrl": "./src",
     "paths": {
       "@components/*": ["components/*"],
       "@config/*": ["config/*"],
-      "@hooks/*": ["hooks/*"]
+      "@hooks/*": ["hooks/*"],
+      "@assets/*": ["assets/*"]
     },
     "allowJs": true,
     "skipLibCheck": true,
@@ -26,7 +23,6 @@
   },
   "include": [
     "next-env.d.ts",
-    "svg.d.ts",
     "**/*.ts",
     "**/*.tsx"
   ],

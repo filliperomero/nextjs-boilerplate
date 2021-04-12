@@ -1,7 +1,7 @@
-import { useTranslation } from 'react-i18next'
+import { useTranslation } from 'next-i18next'
 
-const Translator = (path: string): string => {
-  const { t } = useTranslation()
+const Translator = (namespace: string, path: string): string => {
+  const { t } = useTranslation(namespace)
 
   return t(path)
 }
