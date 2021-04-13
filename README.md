@@ -1,4 +1,4 @@
-## Next.js Pro Boilerplate
+## Next.js Boilerplate
 
 The Next.js production boilerplate, all you need to start developing, without spend hours on configurations.
 
@@ -8,9 +8,9 @@ The Next.js production boilerplate, all you need to start developing, without sp
 - [Prettier](https://prettier.io/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [NextJS](https://nextjs.org/)
-<!-- - [Styled Components](https://styled-components.com/) -->
-<!-- - [Storybook](https://storybook.js.org/) -->
-<!-- - [Husky](https://github.com/typicode/husky) -->
+- [Tailwindcss](https://tailwindcss.com/)
+- [Next-Themes](https://github.com/pacocoursey/next-themes)
+- [Next-i18next](https://github.com/isaachinman/next-i18next)
 - [Jest](https://jestjs.io/)
 - [React Testing Library](https://testing-library.com/docs/react-testing-library/intro)
 
@@ -19,6 +19,6 @@ The Next.js production boilerplate, all you need to start developing, without sp
 First, run the development server:
 
 ```bash
-npm install
-npm run dev
+yarn
+yarn dev
 ```
