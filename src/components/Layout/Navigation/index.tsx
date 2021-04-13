@@ -1,19 +1,11 @@
 import Link from 'next/link'
-import { useEffect, useState } from 'react'
-import { useTheme } from 'next-themes'
 
 import LanguageSelector from '../../LanguageSelector'
+import ThemeSelector from '../../ThemeSelector'
 
-import DarkModeIcon from '@assets/svg/Moon'
-import LightModeIcon from '@assets/svg/Sun'
-import NextjsIcon from '@assets/svg/Nextjs'
+import NextjsIcon from '../../../assets/nextjs.svg'
 
 const Navigation: React.FC = () => {
-  const [mounted, setMounted] = useState(false)
-  const { setTheme, theme } = useTheme()
-
-  useEffect(() => setMounted(true), [])
-
   return (
     <nav className="flex py-3 px-10 justify-between items-center bg-green-700">
       <div className="flex flex-row items-center">
@@ -30,13 +22,7 @@ const Navigation: React.FC = () => {
       </div>
       <div className="flex items-center gap-16">
         <LanguageSelector />
-        <button
-          type="button"
-          className="h-8 w-8 focus:outline-none"
-          onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-        >
-          {mounted && theme === 'dark' ? <LightModeIcon /> : <DarkModeIcon />}
-        </button>
+        <ThemeSelector />
       </div>
     </nav>
   )

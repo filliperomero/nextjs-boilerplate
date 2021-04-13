@@ -1,7 +1,7 @@
 import React, { forwardRef } from 'react'
 
-import BrazilFlag from '@assets/svg/BrazilFlag'
-import UsaFlag from '@assets/svg/UsaFlag'
+import BrazilFlag from '../../../assets/brazilFlag.svg'
+import UsaFlag from '../../../assets/usaFlag.svg'
 
 type IFlagProps = {
   flag: 'brazil' | 'usa'
